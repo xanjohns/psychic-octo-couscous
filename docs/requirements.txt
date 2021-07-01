@@ -11,3 +11,5 @@ git+https://github.com/SymbiFlow/sphinxcontrib-hdl-diagrams.git@master#egg=sphin
 git+https://github.com/SymbiFlow/symbolator.git@master#egg=symbolator
 # XML utils
 git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils
+sphinx-markdown-tables
+sphinx-autobuild
