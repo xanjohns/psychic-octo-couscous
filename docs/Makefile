@@ -26,15 +26,16 @@ REQUIREMENTS_FILE := requirements.txt
 # https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 ENVIRONMENT_FILE := environment.yml
 
-include ../third_party/make-env/conda.mk
+include $(TOP_DIR)/third_party/make-env/conda.mk
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 #@$(IN_CONDA_ENV) pip install -r $(REQUIREMENTS_FILE) 
+#@$(IN_CONDA_ENV) $(SPHINXAUTOBUILD) -b html --ignore \*.swp --ignore \*~ $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)/html"
 livehtml: | $(CONDA_ENV_PYTHON)
-	@$(IN_CONDA_ENV) $(SPHINXAUTOBUILD) -b html --ignore \*.swp --ignore \*~ $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)/html"
+	@$(IN_CONDA_ENV) python --version
 
 .PHONY: help livehtml Makefile
 
