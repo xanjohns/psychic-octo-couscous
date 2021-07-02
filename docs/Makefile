@@ -8,7 +8,7 @@
 # Minimal makefile for Sphinx documentation
 #
 
-MAKEDIR := $(dir $(lastword $(MAKEFILE_LIST)))
+TOP_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
