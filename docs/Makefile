@@ -1,14 +1,5 @@
-# Copyright (C) 2017-2020  The Project X-Ray Authors.
-#
-# Use of this source code is governed by a ISC-style
-# license that can be found in the LICENSE file or at
-# https://opensource.org/licenses/ISC
-#
-# SPDX-License-Identifier: ISC
-# Minimal makefile for Sphinx documentation
-#
-
-TOP_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
+# The top directory where environment will be created.
+TOP_DIR := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
@@ -19,27 +10,25 @@ SOURCEDIR     = .
 BUILDDIR      = _build
 
 # A pip `requirements.txt` file.
-#https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format
+# https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format
 REQUIREMENTS_FILE := requirements.txt
 
 # A conda `environment.yml` file.
 # https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 ENVIRONMENT_FILE := environment.yml
 
-include $(TOP_DIR)/third_party/make-env/conda.mk
+include third_party/make-env/conda.mk
 
-# Put it first so that "make" without argument is like "make help".
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(IN_CONDA_ENV) $(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(0)
 
-#@$(IN_CONDA_ENV) pip install -r $(REQUIREMENTS_FILE)
-#@$(IN_CONDA_ENV) $(SPHINXAUTOBUILD) -b html --ignore \*.swp --ignore \*~ $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)/html"
-livehtml: | $(CONDA_ENV_PYTHON)
+# Example make target which runs commands inside the conda environment.
+test-command: | $(CONDA_ENV_PYTHON)
+	@$(IN_CONDA_ENV) echo "Python is $$(which python)"
 	@$(IN_CONDA_ENV) python --version
+	@$(IN_CONDA_ENV) conda list
 
-.PHONY: help livehtml Makefile
+livehtml: | $(CONDA_ENV_PYTHON)
+	@$(IN_CONDA_ENV) $(SPHINXAUTOBUILD) -b html --ignore \*.swp --ignore \*~ $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+.PHONY: livehtml help Makefile
