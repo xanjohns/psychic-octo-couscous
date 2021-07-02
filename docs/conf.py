@@ -40,16 +40,16 @@ needs_sphinx = '3.0'
 # ones.
 
 # yapf: disable
-# extensions = [
-#     'sphinx.ext.autodoc',
-#     'sphinx.ext.autosummary',
-#     'sphinx.ext.doctest',
-#     'sphinx.ext.imgmath',
-#     'sphinx.ext.napoleon',
-#     'sphinx.ext.todo',
-#     'sphinx_markdown_tables',
-#     'recommonmark'
-#]
+extensions = [
+     'sphinx.ext.autodoc',
+     'sphinx.ext.autosummary',
+     'sphinx.ext.doctest',
+     'sphinx.ext.imgmath',
+     'sphinx.ext.napoleon',
+     'sphinx.ext.todo',
+     'sphinx_markdown_tables',
+     'recommonmark'
+]
 # yapf: enable
 
 # Add any paths that contain templates here, relative to this directory.
