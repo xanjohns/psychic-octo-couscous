@@ -33,7 +33,7 @@ help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 livehtml:
-	@$(IN_CONDA_ENV) pip install -r $(REQUIREMENTS_FILE) 
+	#@$(IN_CONDA_ENV) pip install -r $(REQUIREMENTS_FILE) 
 	@$(IN_CONDA_ENV) $(SPHINXAUTOBUILD) -b html --ignore \*.swp --ignore \*~ $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
 .PHONY: help livehtml Makefile
