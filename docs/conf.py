@@ -49,7 +49,7 @@ needs_sphinx = '3.0'
 #     'sphinx.ext.todo',
 #     'sphinx_markdown_tables',
 #     'recommonmark'
-]
+#]
 # yapf: enable
 
 # Add any paths that contain templates here, relative to this directory.
