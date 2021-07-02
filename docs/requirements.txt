@@ -13,3 +13,5 @@ git+https://github.com/SymbiFlow/symbolator.git@master#egg=symbolator
 git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils
 sphinx-markdown-tables
 sphinx-autobuild
+sphinx-tabs==1.3.0
+sphinx-jinja=1.1.1
