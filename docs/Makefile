@@ -32,7 +32,7 @@ include ../third_party/make-env/conda.mk
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-livehtml:
+livehtml: $(CONDA_ENV_PYTHON)
 	#@$(IN_CONDA_ENV) pip install -r $(REQUIREMENTS_FILE) 
 	@$(IN_CONDA_ENV) $(SPHINXAUTOBUILD) -b html --ignore \*.swp --ignore \*~ $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
