@@ -1,4 +1,0 @@
-  
-sphinx
-sphinx_materialdesign_theme
-sphinxcontrib-images
