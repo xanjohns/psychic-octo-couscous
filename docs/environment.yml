@@ -4,5 +4,9 @@ dependencies:
   - pip
   - python
   - swig
+  # ReadTheDoc dependencies
+  - mock
+  - pillow
+  - sphinx
   - pip:
     - -r file:requirements.txt
