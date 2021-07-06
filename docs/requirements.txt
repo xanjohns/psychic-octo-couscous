@@ -8,7 +8,7 @@ sphinxcontrib-napoleon
 # HDL diagrams using Yosys + netlistsvg
 sphinxcontrib-hdl-diagrams
 # Module diagrams
-git+https://github.com/SymbiFlow/symbolator.git@master#egg=symbolator
+symbolator
 # XML utils
 git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils
 sphinx-markdown-tables
