@@ -3,8 +3,8 @@ sphinx_materialdesign_theme
 sphinxcontrib_images
 sphinx-material
 sphinxcontrib-napoleon
-# Markdown cross-reference solver library
-git+https://github.com/SymbiFlow/sphinxcontrib-markdown-symlinks.git@master#egg=markdown_code_symlinks
+# Markdown cross-reference solver library, posible use m2r
+-e git+https://github.com/SymbiFlow/sphinxcontrib-markdown-symlinks
 # HDL diagrams using Yosys + netlistsvg
 git+https://github.com/SymbiFlow/sphinxcontrib-hdl-diagrams.git@master#egg=sphinxcontrib-hdl-diagrams
 # Module diagrams
