@@ -49,8 +49,12 @@ extensions = [
      'sphinx.ext.todo',
      'sphinx_markdown_tables',
      'recommonmark'
+     'sphinx_issues'
 ]
 # yapf: enable
+
+#Github repo
+issues_github_path = "xanjohns/psychic-octo-couscous"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
