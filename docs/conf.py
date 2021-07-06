@@ -59,6 +59,11 @@ extensions = [
 #Github repo
 issues_github_path = "xanjohns/psychic-octo-couscous"
 
+### SYMBOLATOR ###
+
+symbolator_cmd_args       = ['--transparent']
+symbolator_output_format  = 'svg'
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
