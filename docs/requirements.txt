@@ -1,7 +1,7 @@
 sphinx
 sphinx_materialdesign_theme
 sphinxcontrib_images
-git+http://github.com/SymbiFlow/sphinx_symbiflow_theme.git@master#egg=sphinx_symbiflow_theme
+sphinx-material
 sphinxcontrib-napoleon
 # Markdown cross-reference solver library
 git+https://github.com/SymbiFlow/sphinxcontrib-markdown-symlinks.git@master#egg=markdown_code_symlinks
