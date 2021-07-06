@@ -41,6 +41,8 @@ needs_sphinx = '3.0'
 
 # yapf: disable
 extensions = [
+     'sphinx_issues',
+     'sphinxcontrib.images',
      'sphinx.ext.autodoc',
      'sphinx.ext.autosummary',
      'sphinx.ext.doctest',
@@ -49,7 +51,6 @@ extensions = [
      'sphinx.ext.todo',
      'sphinx_markdown_tables',
      'recommonmark'
-     'sphinx_issues'
 ]
 # yapf: enable
 
