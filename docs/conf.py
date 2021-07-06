@@ -44,6 +44,7 @@ extensions = [
      'sphinx_issues',
      'sphinxcontrib.images',
      'sphinx.ext.napoleon',
+     'sphinxcontrib_hdl_diagrams',
      'sphinx.ext.autodoc',
      'sphinx.ext.autosummary',
      'sphinx.ext.doctest',
