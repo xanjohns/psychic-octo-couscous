@@ -6,7 +6,7 @@ sphinxcontrib-napoleon
 # Markdown cross-reference solver library, posible use m2r
 -e git+https://github.com/SymbiFlow/sphinxcontrib-markdown-symlinks
 # HDL diagrams using Yosys + netlistsvg
-git+https://github.com/SymbiFlow/sphinxcontrib-hdl-diagrams.git@master#egg=sphinxcontrib-hdl-diagrams
+sphinxcontrib-hdl-diagrams
 # Module diagrams
 git+https://github.com/SymbiFlow/symbolator.git@master#egg=symbolator
 # XML utils
