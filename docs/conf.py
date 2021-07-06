@@ -43,11 +43,11 @@ needs_sphinx = '3.0'
 extensions = [
      'sphinx_issues',
      'sphinxcontrib.images',
+     'sphinx.ext.napoleon',
      'sphinx.ext.autodoc',
      'sphinx.ext.autosummary',
      'sphinx.ext.doctest',
      'sphinx.ext.imgmath',
-     'sphinx.ext.napoleon',
      'sphinx.ext.todo',
      'sphinx_markdown_tables',
      'recommonmark'
