@@ -12,10 +12,8 @@ sphinxcontrib-hdl-diagrams
 symbolator
 #Requires recommonmark
 sphinx-markdown-tables
-
-# XML utils
-git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils
 sphinx-autobuild
+
 sphinx-tabs==1.3.0
 sphinx-jinja==1.1.1
 breathe
@@ -25,3 +23,5 @@ nmigen
 yowasp-yosys
 pycairo
 packaging
+# XML utils
+git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils
