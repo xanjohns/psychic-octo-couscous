@@ -72,6 +72,8 @@ templates_path = ['_templates']
 source_suffix = ['.rst', '.md']
 source_parsers = {
     '.md': 'markdown_code_symlinks.LinkParser',
+    # sphinx-markdown-tables
+    '.md': 'recommonmark.parser.CommonMarkParser',
 }
 
 # The master toctree document.
