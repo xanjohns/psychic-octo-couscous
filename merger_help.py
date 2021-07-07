@@ -3,4 +3,5 @@ import json;
 import os;
 json_arr = json.load(sys.stdin)
 for val in json_arr:
-    os.system("git clone {}['clone_url']".format(val))
+    url = val['clone_url']
+    os.system("git clone {}".format(url))
