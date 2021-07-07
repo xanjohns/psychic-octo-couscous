@@ -13,8 +13,8 @@ symbolator
 #Requires recommonmark
 sphinx-markdown-tables
 sphinx-autobuild
-
 sphinx-tabs==1.3.0
+
 sphinx-jinja==1.1.1
 breathe
 docutils
