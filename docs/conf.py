@@ -54,6 +54,7 @@ extensions = [
      'sphinx_markdown_tables',
      'recommonmark',
      'sphinx_tabs.tabs',
+     'sphinxcontrib.jinja',
 ]
 # yapf: enable
 
