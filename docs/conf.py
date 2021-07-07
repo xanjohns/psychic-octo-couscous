@@ -52,7 +52,8 @@ extensions = [
      'sphinx.ext.imgmath',
      'sphinx.ext.todo',
      'sphinx_markdown_tables',
-     'recommonmark'
+     'recommonmark',
+     'sphinx_tabs.tabs',
 ]
 # yapf: enable
 
