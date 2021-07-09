@@ -10,9 +10,18 @@ sphinxcontrib-napoleon
 sphinxcontrib-hdl-diagrams
 # Module diagrams
 symbolator
-# XML utils
-git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils
+#Requires recommonmark
 sphinx-markdown-tables
 sphinx-autobuild
 sphinx-tabs==1.3.0
+
 sphinx-jinja==1.1.1
+breathe
+docutils
+recommonmark
+nmigen
+yowasp-yosys
+pycairo
+packaging
+# XML utils
+git+https://github.com/SymbiFlow/vtr-xml-utils.git#egg=vtr-xml-utils

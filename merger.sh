@@ -13,7 +13,8 @@ for dir in ./* ; do
 
     echo "Adding Subtree"
     cd ${dir##*/}
-    git subtree add --prefix third_party https://github.com/ryancj14/common-config.git main --squash
+    git checkout -b add-common-config
+    git subtree add --prefix third_party/common-config https://github.com/ryancj14/common-config.git main --squash
 
     mkdir -p docs
     mkdir -p .github
@@ -21,9 +22,10 @@ for dir in ./* ; do
     cp -rf third_party/.github/* ./.github
     cp -rf third_party/formatter-files/. .
     cp -f third_party/LICENSE .
-#     git add .
-#     git commit -m ""
-#     git push
+    git add .
+    git commit -m "Add common-config repo as subtree"
+    git push
+    gh pr create --title "Add common-config repo as subtree" --body "Add common-config repo as subtree under `third_party` directory. Files are also copied to their required locations in `docs`, `.github`, etc." --base ryancj14/practice-upstream
     cd ..
   fi
 done

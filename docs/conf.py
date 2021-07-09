@@ -52,7 +52,9 @@ extensions = [
      'sphinx.ext.imgmath',
      'sphinx.ext.todo',
      'sphinx_markdown_tables',
-     'recommonmark'
+     'recommonmark',
+     'sphinx_tabs.tabs',
+     'sphinxcontrib.jinja',
 ]
 # yapf: enable
 
@@ -72,6 +74,8 @@ templates_path = ['_templates']
 source_suffix = ['.rst', '.md']
 source_parsers = {
     '.md': 'markdown_code_symlinks.LinkParser',
+    # sphinx-markdown-tables
+    '.md': 'recommonmark.parser.CommonMarkParser',
 }
 
 # The master toctree document.
