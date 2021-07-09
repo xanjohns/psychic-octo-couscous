@@ -1,5 +1,12 @@
 #!/bin/bash
 
+read -p "This will create many pull requests. Are you sure you want to continue? (y/n) "  -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+  kill -INT $$
+fi
+
 mkdir tmpClone
 cd tmpClone
 
@@ -25,7 +32,7 @@ for dir in ./* ; do
     git add .
     git commit -m "Add common-config repo as subtree"
     git push --set-upstream origin add-common-config
-    gh pr create --head xanjohns/practice-upstream:main --title "Add common-config repo as subtree" --body "Add common-config repo as subtree under third_party directory. Files are also copied to their required locations in docs, .github, etc."     
+    gh pr create --repo ryancj14/${dir##*/} --title "Add common-config repo as subtree" --body "Add common-config repo as subtree under third_party directory. Files are also copied to their required locations in docs, .github, etc."     
     cd ..
   fi
 done
