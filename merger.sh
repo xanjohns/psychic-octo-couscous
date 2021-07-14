@@ -28,10 +28,10 @@ for dir in ./* ; do
 
     mkdir -p docs
     mkdir -p .github
-    cp -f third_party/docs/* ./docs   
-    cp -rf third_party/.github/* ./.github
-    cp -rf third_party/formatter-files/. .
-    cp -f third_party/LICENSE .
+    cp -f third_party/common-config/docs/* ./docs   
+    cp -rf third_party/common-config/.github/* ./.github
+    cp -rf third_party/common-config/formatter-files/. .
+    cp -f third_party/common-config/LICENSE .
     git add .
     git commit -m "Add common-config repo as subtree"
     git push
