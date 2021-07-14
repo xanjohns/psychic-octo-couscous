@@ -14,7 +14,7 @@ fi
 
 
 echo "Clone repos"
-curl -u xanjohns -s https://api.github.com/orgs/SymbiFlow/repos?per_page=200 | python ../merger_help.py 
+curl -s https://api.github.com/orgs/SymbiFlow/repos?per_page=200 | python ../merger_help.py 
 
 echo "Repos cloned"
 for dir in ./* ; do
